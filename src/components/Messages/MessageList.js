@@ -32,7 +32,7 @@ class MessageList extends Component {
                         <MessageCard
                             key={message.id}
                             message={message}
-                            deleteAnimal={this.deleteMessage}
+                            deleteMessage={this.deleteMessage}
                             {...this.props}
                         />
                     )}
