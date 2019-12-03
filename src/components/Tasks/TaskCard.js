@@ -1,0 +1,21 @@
+import React, { Component } from 'react';
+import { Link } from "react-router-dom"
+
+
+class TaskCard extends Component {
+    render() {
+        return (
+
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title" style={{width: "18rem"}}><b>{this.props.task.task}</b></h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="card-link">Delete</a>
+                <a href="#" class="card-link">Edit</a>
+            </div>
+        </div>
+        )
+    }
+}
+
+export default TaskCard
