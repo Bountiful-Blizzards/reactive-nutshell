@@ -5,8 +5,8 @@ class NewsCard extends Component {
   render() {
     return (
 
-    <div class="card">
-        <div class="card-body">
+    <div className="card">
+        <div className="card-body">
         <article id="newArticleForm"><h1>Add New Article</h1>
         <section>
             <label for="articleTitle">News Article</label>
