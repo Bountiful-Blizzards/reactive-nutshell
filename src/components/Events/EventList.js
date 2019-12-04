@@ -36,7 +36,7 @@ class EventList extends Component {
                         <button type="button"
                             className="btn"
                             onClick={() => { this.groups.history.push("/events/new") }}>
-                </button>
+                        </button>
                     <Link to={`/events/new`}>Add Event</Link>
                         </section>
             </>
