@@ -14,6 +14,8 @@ import MessageForm from "./Messages/MessageForm";
 
 
 
+
+
 export default class ApplicationViews extends Component {
 
   render() {
@@ -38,13 +40,13 @@ export default class ApplicationViews extends Component {
         />
 
         <Route
-          path="/messages" render={props => {
+          exact path="/messages" render={props => {
             return <MessageList {...props} />
           }}
         />
 
         <Route
-          path="/messages" render={props => {
+          path="/messages/new" render={props => {
             return <MessageForm {...props} />
             // Remove null and return the component which will show the messages
           }}
