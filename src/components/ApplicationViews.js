@@ -1,8 +1,12 @@
 import { Route } from "react-router-dom";
 import React, { Component } from "react";
 import MessageList from "./Messages/MessageList";
+<<<<<<< HEAD
+import Newslist from "./News/NewsList";
+=======
 import EventList from "./Events/EventList";
 import TaskList from "./Tasks/TaskList";
+>>>>>>> master
 
 
 
@@ -53,6 +57,13 @@ export default class ApplicationViews extends Component {
           path="/events" render={props => {
             return <EventList {...props} />
             // Remove null and return the component which will show the user's events
+          }}
+        />
+
+<Route
+          path="/articles" render={props => {
+            return <Newslist {...props} />
+            // Remove null and return the component which will show the messages
           }}
         />
 
