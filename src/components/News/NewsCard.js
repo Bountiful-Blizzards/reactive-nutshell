@@ -1,33 +1,21 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom"
 
 
 class NewsCard extends Component {
-  render() {
-    return (
+    render() {
+        return (
+            <div className="card">
+                <div className="card-body">
+                    <input type="checkbox"></input>
+                    <Link to={`/articles/${this.props.article.id}`} className="card-title" style={{ width: "18rem" }}><h5><b>{this.props.article.title}</b></h5></Link>
+                    <div className="input-group-append" id="button-addon4">
+                        <button className="btn btn-outline-secondary" type="button">Delete</button>
+                    </div>
+                </div>
+            </div>
+        )
+    }
+}
 
-    <div className="card">
-        <div className="card-body">
-        <article id="newArticleForm"><h1>Add New Article</h1>
-        <section>
-            <label htmlFor="articleTitle">News Article</label>
-            <input type="text" id="articleTitle-input"/>
-        </section>
-    
-        <section>
-            <label htmlFor="synopsis">Synopsis</label>
-            <textarea type="text" id="synopsis-input" rows="3"></textarea>
-        </section>
-    
-        <section>
-        <label htmlFor="url">Article URL</label>
-        <input type="text" id="url-input"/>
-        </section>
-        <button id="saveArticle">Save Article</button>
-        </article>
-        </div>
-    </div>
-    )
-}
-}
-  
-  export default NewsCard
+export default NewsCard
