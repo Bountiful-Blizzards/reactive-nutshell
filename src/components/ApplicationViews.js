@@ -5,7 +5,12 @@ import Newslist from "./News/NewsList";
 import EventList from "./Events/EventList";
 import TaskList from "./Tasks/TaskList";
 import NewsForm from "./News/NewsForm";
+<<<<<<< HEAD
 import EventForm from "./Events/EventForm";
+=======
+import MessageForm from "./Messages/MessageForm";
+
+>>>>>>> master
 
 
 
@@ -16,7 +21,6 @@ export default class ApplicationViews extends Component {
   render() {
     return (
       <React.Fragment>
-
         <Route
           exact path="/" render={props => {
             return null
@@ -42,11 +46,24 @@ export default class ApplicationViews extends Component {
         />
 
         <Route
+<<<<<<< HEAD
           exact path="/tasks" render={props => {
             return <TaskList {...props} />
+=======
+          path="/messages" render={props => {
+            return <MessageForm {...props} />
+            // Remove null and return the component which will show the messages
+>>>>>>> master
           }}
-        />
+          />
+            <Route
+              exact path="/tasks" render={props => {
+                return <TaskList {...props} />
+                // Remove null and return the component which will show the user's tasks
+              }}
+            />
 
+<<<<<<< HEAD
         <Route
            exact path="/events" render={props => {
             return <EventList {...props} />
@@ -67,8 +84,29 @@ export default class ApplicationViews extends Component {
             // Remove null and return the component which will show the messages
           }}
         />
+=======
+            <Route
+              path="/events" render={props => {
+                return <EventList {...props} />
+                // Remove null and return the component which will show the user's events
+              }}
+            />
+
+            <Route
+              exact path="/articles" render={props => {
+                return <Newslist {...props} />
+                // Remove null and return the component which will show the messages
+              }}
+            />
+            <Route
+              path="/articles/new" render={props => {
+                return <NewsForm {...props} />
+                // Remove null and return the component which will show the messages
+              }}
+            />
+>>>>>>> master
 
       </React.Fragment>
-    );
+      );
+    }
   }
-}
