@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Link } from "react-router-dom"
 import EventCard from "./EventsCard"
 import EventManager from "../../Modules/EventManager"
 
@@ -21,12 +22,6 @@ class EventList extends Component {
     render() {
         return (
             <>
-                <section className="section-content">
-                    <button type="button"
-                        className="btn"
-                        onClick={() => { this.groups.history.push("/events/new") }}>
-            </button>
-                </section>
                 <div className="container-cards">
                     {this.state.events.map(event =>
                         <EventCard
@@ -37,6 +32,13 @@ class EventList extends Component {
                         />
                     )}
                 </div>
+                    <section className="section-content">
+                        <button type="button"
+                            className="btn"
+                            onClick={() => { this.groups.history.push("/events/new") }}>
+                </button>
+                    <Link to={`/events/new`}>Add Event</Link>
+                        </section>
             </>
         )
     }

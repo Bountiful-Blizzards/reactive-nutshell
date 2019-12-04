@@ -8,7 +8,7 @@ class TaskCard extends Component {
             <div className="card">
                 <div className="card-body">
                     <input type="checkbox"></input>
-                    <Link to={`/animals/${this.props.task.id}`} className="card-title" style={{ width: "18rem" }}><h5><b>{this.props.task.task}</b></h5></Link>
+                    <Link to={`/tasks/${this.props.task.id}`} className="card-title" style={{ width: "18rem" }}><h5><b>{this.props.task.task}</b></h5></Link>
                     <div className="input-group-append" id="button-addon4">
                         <button className="btn btn-outline-secondary" type="button">Delete</button>
                     </div>
