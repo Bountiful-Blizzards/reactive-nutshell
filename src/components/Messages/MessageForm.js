@@ -1,22 +1,31 @@
 import React, { Component } from 'react';
 
 
-
-class messageForm extends Components {
+class MessageForm extends Component {
     render() {
         return (
-            <form>
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Example textarea</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+            <div className="card">
+                <div className="card-body">
+                    <article id="newMessageForm"><h1>New Message</h1>
+
+
+                        <section>
+                            <label htmlFor="message"></label>
+                            <textarea type="text" id="synopsis-input" length="3" rows="3"></textarea>
+
+                        </section>
+
+                        <section>
+                        </section>
+                        <button id="saveMessage">Save Message</button>
+                    </article>
                 </div>
-            </form>
-
+            </div>
         )
-
     }
 }
 
 
 
-export default messageForm;
+export default MessageForm

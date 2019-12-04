@@ -44,4 +44,6 @@ class Newslist extends Component {
     }
 }
 
+
+
 export default Newslist
