@@ -5,6 +5,7 @@ import Newslist from "./News/NewsList";
 import EventList from "./Events/EventList";
 import TaskList from "./Tasks/TaskList";
 import NewsForm from "./News/NewsForm";
+import TaskForm from "./Tasks/TaskForm";
 import EventForm from "./Events/EventForm";
 import MessageForm from "./Messages/MessageForm";
 
@@ -47,15 +48,20 @@ export default class ApplicationViews extends Component {
             return <MessageForm {...props} />
             // Remove null and return the component which will show the messages
           }}
-          />
-            <Route
-              exact path="/tasks" render={props => {
-                return <TaskList {...props} />
-                // Remove null and return the component which will show the user's tasks
-              }}
-            />
+        />
+        <Route
+          exact path="/tasks" render={props => {
+            return <TaskList {...props} />
+            // Remove null and return the component which will show the user's tasks
+          }}
+        />
 
         <Route
+          path="/tasks/new" render={props => {
+            return <TaskForm {...props} />
+            // Remove null and return the component which will show the user's tasks
+          }}
+        />
            exact path="/events" render={props => {
             return <EventList {...props} />
           }}
@@ -76,6 +82,6 @@ export default class ApplicationViews extends Component {
         />
 
       </React.Fragment>
-      );
-    }
+    );
   }
+}
