@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import NewsManager from '../../Modules/NewsManager'
 import NewsCard from './NewsCard'
+import { Link } from "react-router-dom"
 
 class Newslist extends Component {
     state = {
@@ -26,6 +27,7 @@ class Newslist extends Component {
                         className="btn"
                         onClick={() => { this.groups.history.push("/articles/new") }}>
             </button>
+            <Link to={`/articles/new`}>ADD NEW</Link>
                 </section>
                 <div className="container-cards">
                     {this.state.articles.map(article =>
