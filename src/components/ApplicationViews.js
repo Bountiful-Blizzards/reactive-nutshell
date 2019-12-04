@@ -1,12 +1,9 @@
 import { Route } from "react-router-dom";
 import React, { Component } from "react";
 import MessageList from "./Messages/MessageList";
-<<<<<<< HEAD
 import Newslist from "./News/NewsList";
-=======
 import EventList from "./Events/EventList";
 import TaskList from "./Tasks/TaskList";
->>>>>>> master
 
 
 
