@@ -5,6 +5,7 @@ import Newslist from "./News/NewsList";
 import EventList from "./Events/EventList";
 import TaskList from "./Tasks/TaskList";
 import NewsForm from "./News/NewsForm";
+import EventForm from "./Events/EventForm";
 
 
 
@@ -47,10 +48,13 @@ export default class ApplicationViews extends Component {
         />
 
         <Route
-          path="/events" render={props => {
+           exact path="/events" render={props => {
             return <EventList {...props} />
           }}
         />
+        <Route path="/events/new" render={(props) => {
+          return <EventForm {...props} />
+         }} />
 
         <Route
          exact path="/articles" render={props => {
