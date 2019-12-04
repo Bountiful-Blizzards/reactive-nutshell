@@ -1,7 +1,6 @@
 import React, { Component } from "react"
 import MessageCard from "./MessageCard"
 import MessageManager from "../../Modules/MessageManager"
-import MessageForm from "./MessageForm"
 import { Link } from "react-router-dom"
 
 
@@ -29,6 +28,7 @@ class MessageList extends Component {
                         className="btn"
                         onClick={() => { this.groups.history.push("/messages/new") }}>
                     </button>
+                    <Link to={`/messages/new`}>Add Message</Link>
                 </section>
                 <div className="container-cards">
                     {this.state.messages.map(message =>
