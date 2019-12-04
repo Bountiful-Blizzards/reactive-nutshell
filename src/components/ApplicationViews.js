@@ -57,7 +57,7 @@ export default class ApplicationViews extends Component {
           }}
         />
 
-<Route
+        <Route
           path="/articles" render={props => {
             return <Newslist {...props} />
             // Remove null and return the component which will show the messages
