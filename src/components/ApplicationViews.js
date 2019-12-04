@@ -60,7 +60,7 @@ export default class ApplicationViews extends Component {
         />
 
         <Route
-          exact path="/tasks" render={props => {
+          path="/tasks/new" render={props => {
             return <TaskForm {...props} />
             // Remove null and return the component which will show the user's tasks
           }}
