@@ -12,7 +12,7 @@ class MessageForm extends Component {
 
                         <section>
                             <label htmlFor="message"></label>
-                            <textarea type="text" id="synopsis-input" length="3" rows="3"></textarea>
+                            <textarea type="text" id="message-input" rows="3"></textarea>
 
                         </section>
 

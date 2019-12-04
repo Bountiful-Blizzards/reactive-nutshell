@@ -29,7 +29,6 @@ class MessageList extends Component {
                         className="btn"
                         onClick={() => { this.groups.history.push("/messages/new") }}>
                     </button>
-                    <Link to={`/messages/new`}>ADD NEW</Link>
                 </section>
                 <div className="container-cards">
                     {this.state.messages.map(message =>
