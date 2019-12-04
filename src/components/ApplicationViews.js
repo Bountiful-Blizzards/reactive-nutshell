@@ -5,6 +5,7 @@ import Newslist from "./News/NewsList";
 import EventList from "./Events/EventList";
 import TaskList from "./Tasks/TaskList";
 import NewsForm from "./News/NewsForm";
+import TaskForm from "./Tasks/TaskForm";
 
 
 
@@ -52,6 +53,13 @@ export default class ApplicationViews extends Component {
         />
 
         <Route
+          exact path="/tasks" render={props => {
+            return <TaskForm {...props} />
+            // Remove null and return the component which will show the user's tasks
+          }}
+        />
+
+        <Route
           path="/events" render={props => {
             return <EventList {...props} />
             // Remove null and return the component which will show the user's events
@@ -59,12 +67,12 @@ export default class ApplicationViews extends Component {
         />
 
         <Route
-         exact path="/articles" render={props => {
+          exact path="/articles" render={props => {
             return <Newslist {...props} />
             // Remove null and return the component which will show the messages
           }}
         />
-         <Route
+        <Route
           path="/articles/new" render={props => {
             return <NewsForm {...props} />
             // Remove null and return the component which will show the messages
