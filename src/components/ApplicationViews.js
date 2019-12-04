@@ -1,6 +1,7 @@
 import { Route } from "react-router-dom";
 import React, { Component } from "react";
 import MessageList from "./Messages/MessageList";
+import Newslist from "./News/NewsList";
 
 
 
@@ -51,6 +52,13 @@ export default class ApplicationViews extends Component {
           path="/events" render={props => {
             return null
             // Remove null and return the component which will show the user's events
+          }}
+        />
+
+<Route
+          path="/articles" render={props => {
+            return <Newslist {...props} />
+            // Remove null and return the component which will show the messages
           }}
         />
 
