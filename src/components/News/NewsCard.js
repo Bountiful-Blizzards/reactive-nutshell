@@ -9,17 +9,17 @@ class NewsCard extends Component {
         <div className="card-body">
         <article id="newArticleForm"><h1>Add New Article</h1>
         <section>
-            <label for="articleTitle">News Article</label>
+            <label htmlFor="articleTitle">News Article</label>
             <input type="text" id="articleTitle-input"/>
         </section>
     
         <section>
-            <label for="synopsis">Synopsis</label>
+            <label htmlFor="synopsis">Synopsis</label>
             <textarea type="text" id="synopsis-input" rows="3"></textarea>
         </section>
     
         <section>
-        <label for="url">Article URL</label>
+        <label htmlFor="url">Article URL</label>
         <input type="text" id="url-input"/>
         </section>
         <button id="saveArticle">Save Article</button>
