@@ -7,11 +7,11 @@ class TaskCard extends Component {
         return (
 
         <div class="card">
-            <div class="card-body">
-                <h5 class="card-title" style={{width: "18rem"}}><b>{this.props.task.task}</b></h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="card-link">Delete</a>
-                <a href="#" class="card-link">Edit</a>
+            <div className="card-body">
+                <h5 className="card-title" style={{width: "18rem"}}><b>{this.props.task.task}</b></h5>
+                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" className="card-link">Delete</a>
+                <a href="#" className="card-link">Edit</a>
             </div>
         </div>
         )
