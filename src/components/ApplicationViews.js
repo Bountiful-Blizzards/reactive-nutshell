@@ -64,7 +64,7 @@ export default class ApplicationViews extends Component {
             // Remove null and return the component which will show the user's tasks
           }}
         />
-           exact path="/events" render={props => {
+          <Route exact path="/events" render={props => {
             return <EventList {...props} />
           }}
         />

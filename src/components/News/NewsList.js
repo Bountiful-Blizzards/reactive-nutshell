@@ -18,7 +18,17 @@ class Newslist extends Component {
             })
 
     }
-
+        deleteArticle=id=>{
+            NewsManager.delete(id)
+            .then(() => {
+                NewsManager.getAll()
+                .then((newArticles) => {
+                    this.setState({
+                        articles: newArticles
+                    })
+                })
+            })
+        }
     render() {
         return (
             <>
