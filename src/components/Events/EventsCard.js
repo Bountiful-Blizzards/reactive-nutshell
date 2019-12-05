@@ -9,7 +9,7 @@ class EventCard extends Component {
               <picture>
                   {/* pictures will go here */}
               </picture>
-              <h2>Name: <span className="card-eventname">{this.props.event.name}</span></h2>
+              <strong>Name: <span className="card-eventname">{this.props.event.name}</span></strong>
               <p>Date: {this.props.event.date}</p>
               <p>Location: {this.props.event.location}</p>
               <button type="button" onClick={() => {this.props.history.push(`/events/${this.props.event.id}/edit`)}}>Edit</button>
