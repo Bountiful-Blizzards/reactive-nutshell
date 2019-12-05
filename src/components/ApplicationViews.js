@@ -12,6 +12,8 @@ import MessageEditForm from "./Messages/MessageEditForm";
 import EventEditForm from "./Events/EventEditForm";
 import TaskEditForm from "./Tasks/TaskEditForm";
 import Login from "./Auth/Login";
+import NewsEditForm from "./News/NewsEditForm";
+import Reg from "./Auth/Reg"
 
 
 
@@ -36,7 +38,7 @@ export default class ApplicationViews extends Component {
 
         <Route
           exact path="/register" render={props => {
-            return null
+            return <Reg setUser= {this.props.setUser} {...props}/>
           }}
         />
 
@@ -105,6 +107,11 @@ export default class ApplicationViews extends Component {
         <Route
           path="/articles/new" render={props => {
             return <NewsForm {...props} />
+          }}
+        />
+         <Route
+          path="/articles/:articles(\d+)/edit" render={props => {
+            return <NewsEditForm {...props} />
           }}
         />
 
