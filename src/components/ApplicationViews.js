@@ -8,6 +8,8 @@ import NewsForm from "./News/NewsForm";
 import TaskForm from "./Tasks/TaskForm";
 import EventForm from "./Events/EventForm";
 import MessageForm from "./Messages/MessageForm";
+import MessageEditForm from "./Messages/MessageEditForm";
+
 import TaskEditForm from "./Tasks/TaskEditForm";
 
 
@@ -39,6 +41,9 @@ export default class ApplicationViews extends Component {
             return null
           }}
         />
+        {/* <Route exact path="/messages/:messageId(\d+)" render={(props) => {
+          return <MessageDetail messageId={parseInt(props.match.params.messageId)} {...props} />
+        }} /> */}
 
         <Route
           exact path="/messages" render={props => {
@@ -50,6 +55,11 @@ export default class ApplicationViews extends Component {
           path="/messages/new" render={props => {
             return <MessageForm {...props} />
             // Remove null and return the component which will show the messages
+          }}
+        />
+        <Route
+          path="/messages/:messageId(\d+)/edit" render={props => {
+            return <MessageEditForm {...props} />
           }}
         />
         <Route
@@ -77,14 +87,14 @@ export default class ApplicationViews extends Component {
         />
         <Route path="/events/new" render={(props) => {
           return <EventForm {...props} />
-         }} />
+        }} />
 
         <Route
-         exact path="/articles" render={props => {
+          exact path="/articles" render={props => {
             return <Newslist {...props} />
           }}
         />
-         <Route
+        <Route
           path="/articles/new" render={props => {
             return <NewsForm {...props} />
             // Remove null and return the component which will show the messages
