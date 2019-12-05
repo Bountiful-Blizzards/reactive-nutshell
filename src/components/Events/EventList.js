@@ -19,6 +19,18 @@ class EventList extends Component {
 
     }
 
+    deleteEvent = id => {
+        EventManager.delete(id)
+        .then(() => {
+          EventManager.getAll()
+          .then((newEvents) => {
+            this.setState({
+                events: newEvents
+            })
+          })
+        })
+      }
+
     render() {
         return (
             <>
