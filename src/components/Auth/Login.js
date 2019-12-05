@@ -1,6 +1,9 @@
 import React, { Component } from "react"
 import Nutshell from "../Nutshell"
+
+
 class Login extends Component {
+
   // Set initial state
   state = {
     email: "",
@@ -19,7 +22,9 @@ class Login extends Component {
       password: this.state.password
     })
     this.props.history.push("/articles");
+
   }
+
   render() {
     return (
       <form onSubmit={this.handleLogin}>
@@ -44,5 +49,7 @@ class Login extends Component {
       </form>
     )
   }
+
 }
+
 export default Login

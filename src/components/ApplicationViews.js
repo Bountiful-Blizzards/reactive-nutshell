@@ -1,4 +1,4 @@
-import { Route } from "react-router-dom";
+import { Route, withRouter, Redirect } from "react-router-dom";
 import React, { Component } from "react";
 import MessageList from "./Messages/MessageList";
 import Newslist from "./News/NewsList";
@@ -22,6 +22,8 @@ import NewsEditForm from "./News/NewsEditForm";
 
 
 export default class ApplicationViews extends Component {
+  
+ 
 
   render() {
     return (
