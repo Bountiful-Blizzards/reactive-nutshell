@@ -41,10 +41,6 @@ class TaskForm extends Component {
     };
 
 
-    componentDidMount() {
-
-    }
-
 
     render() {
         return (
