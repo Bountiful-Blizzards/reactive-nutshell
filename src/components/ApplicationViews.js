@@ -8,6 +8,7 @@ import NewsForm from "./News/NewsForm";
 import TaskForm from "./Tasks/TaskForm";
 import EventForm from "./Events/EventForm";
 import MessageForm from "./Messages/MessageForm";
+import TaskEditForm from "./Tasks/TaskEditForm";
 
 
 
@@ -64,6 +65,12 @@ export default class ApplicationViews extends Component {
             // Remove null and return the component which will show the user's tasks
           }}
         />
+        <Route
+          path="/tasks/:taskId(\d+)/edit" render={props => {
+            return <TaskEditForm {...props} />
+          }}
+        />
+        <Route
            exact path="/events" render={props => {
             return <EventList {...props} />
           }}
