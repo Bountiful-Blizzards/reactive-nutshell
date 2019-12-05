@@ -9,7 +9,7 @@ import TaskForm from "./Tasks/TaskForm";
 import EventForm from "./Events/EventForm";
 import MessageForm from "./Messages/MessageForm";
 import MessageEditForm from "./Messages/MessageEditForm";
-
+import EventEditForm from "./Events/EventEditForm";
 import TaskEditForm from "./Tasks/TaskEditForm";
 
 
@@ -88,6 +88,10 @@ export default class ApplicationViews extends Component {
         <Route path="/events/new" render={(props) => {
           return <EventForm {...props} />
         }} />
+
+        <Route path="/events/:eventId(\d+)/edit" render={props => {
+          return <EventEditForm {...props} />
+         }} />
 
         <Route
           exact path="/articles" render={props => {
