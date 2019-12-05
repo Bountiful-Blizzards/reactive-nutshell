@@ -11,6 +11,7 @@ import MessageForm from "./Messages/MessageForm";
 import MessageEditForm from "./Messages/MessageEditForm";
 import EventEditForm from "./Events/EventEditForm";
 import TaskEditForm from "./Tasks/TaskEditForm";
+import NewsEditForm from "./News/NewsEditForm";
 
 
 
@@ -101,6 +102,11 @@ export default class ApplicationViews extends Component {
         <Route
           path="/articles/new" render={props => {
             return <NewsForm {...props} />
+          }}
+        />
+         <Route
+          path="/articles/:articles(\d+)/edit" render={props => {
+            return <NewsEditForm {...props} />
           }}
         />
 
