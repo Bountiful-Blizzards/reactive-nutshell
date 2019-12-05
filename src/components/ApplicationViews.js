@@ -1,4 +1,4 @@
-import { Route } from "react-router-dom";
+import { Route, withRouter, Redirect } from "react-router-dom";
 import React, { Component } from "react";
 import MessageList from "./Messages/MessageList";
 import Newslist from "./News/NewsList";
@@ -11,6 +11,7 @@ import MessageForm from "./Messages/MessageForm";
 import MessageEditForm from "./Messages/MessageEditForm";
 import EventEditForm from "./Events/EventEditForm";
 import TaskEditForm from "./Tasks/TaskEditForm";
+import Login from "./Auth/Login";
 
 
 
@@ -20,13 +21,15 @@ import TaskEditForm from "./Tasks/TaskEditForm";
 
 
 export default class ApplicationViews extends Component {
+  
+ 
 
   render() {
     return (
       <React.Fragment>
         <Route
           exact path="/" render={props => {
-            return null
+            return <Login setUser= {this.props.setUser} {...props}/>
           }}
         />
 
