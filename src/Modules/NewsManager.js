@@ -13,13 +13,13 @@ export default {
     })
       .then(result => result.json())
   },
-  post(newArticle) {
+  post(addNewArticle) {
     return fetch(`${remoteURL}/articles`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(newArticle)
+      body: JSON.stringify(addNewArticle)
     }).then(data => data.json())
   },
   update(editArticle) {                                       // this is a put method

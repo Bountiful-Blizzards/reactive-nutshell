@@ -10,7 +10,7 @@ class NewsCard extends Component {
                     <input type="checkbox"></input>
                     <Link to={`/articles/${this.props.article.id}`} className="card-title" style={{ width: "18rem" }}><h5><b>{this.props.article.title}</b></h5></Link>
                     <div className="input-group-append" id="button-addon4">
-                        <button className="btn btn-outline-secondary" type="button">Delete</button>
+                        <button type="button" onClick={() => this.props.deleteArticle(this.props.article.id)} >Delete</button>
                     </div>
                 </div>
             </div>
