@@ -20,7 +20,7 @@ class MessageEditForm extends Component {
       this.setState({ loadingStatus: true });
       const editedMessage = {
         id: this.props.match.params.messageId,
-        message: this.state.messageMessage,
+        message: this.state.message,  //d
       };
 
       MessageManager.update(editedMessage)
@@ -30,8 +30,9 @@ class MessageEditForm extends Component {
     componentDidMount() {
       MessageManager.get(this.props.match.params.messageId)
       .then(message => {
+          console.log(message)
           this.setState({
-            message: message,
+            message: message.message,
             loadingStatus: false,
           });
       });
@@ -46,10 +47,9 @@ class MessageEditForm extends Component {
               <input
                 type="text"
                 required
-                className="form-control"
                 onChange={this.handleFieldChange}
                 id="message"
-                value={this.state.messageMessage}
+                value={this.state.message}  //d
               />
               <label htmlFor="message">Message</label>
             </div>
