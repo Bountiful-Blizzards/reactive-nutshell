@@ -20,6 +20,18 @@ class MessageList extends Component {
 
     }
 
+    deleteMessage = id => {
+        MessageManager.delete(id)
+        .then(() => {
+          MessageManager.getAll()
+          .then((newMessages) => {
+            this.setState({
+                messages: newMessages
+            })
+          })
+        })
+      }
+
     render() {
         return (
             <>
