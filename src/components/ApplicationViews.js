@@ -11,6 +11,7 @@ import MessageForm from "./Messages/MessageForm";
 import MessageEditForm from "./Messages/MessageEditForm";
 import EventEditForm from "./Events/EventEditForm";
 import TaskEditForm from "./Tasks/TaskEditForm";
+import Login from "./Auth/Login";
 import NewsEditForm from "./News/NewsEditForm";
 
 
@@ -25,9 +26,10 @@ export default class ApplicationViews extends Component {
   render() {
     return (
       <React.Fragment>
-        <Route
+
+       <Route
           exact path="/" render={props => {
-            return null
+            return <Login setUser= {this.props.setUser} {...props}/>
           }}
         />
 
