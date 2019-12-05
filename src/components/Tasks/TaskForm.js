@@ -10,6 +10,7 @@ class TaskForm extends Component {
     state = {
         taskName: "",
         status: false,
+        finishDate: "",
         loadingStatus: false,
     };
 
@@ -30,6 +31,7 @@ class TaskForm extends Component {
             const task = {
                 name: this.state.taskName,
                 status: this.state.status,
+                date: this.state.finishDate,
             };
 
             // Create the animal and redirect user to animal list
@@ -48,11 +50,12 @@ class TaskForm extends Component {
         return (
             <>
                 <div className="form-group row">
-                    <div className="formgrid">
-                        <label htmlFor="taskName" className="col-sm-2 col-form-label"></label>
-                        <input type="text" onChange={this.handleFieldChange} className="form-control" id="taskName"/>
-                        <placeholder htmlFor="taskName">Enter New Task</placeholder>
-                    </div>
+                    <section className="formgrid">
+                        <label htmlFor="taskName">Add New</label>
+                        <input type="text" onChange={this.handleFieldChange} className="form-control" id="taskName" />
+                        <label htmlFor="finishDate"></label>
+                        <input type="date" id="finishDate" onChange={this.handleFieldChange} />
+                    </section>
                 </div>
                 <div className="form-group row">
                     <div className="col-sm-10">
