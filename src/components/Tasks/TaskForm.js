@@ -51,7 +51,6 @@ class TaskForm extends Component {
                     <div className="formgrid">
                         <label htmlFor="taskName" className="col-sm-2 col-form-label"></label>
                         <input type="text" onChange={this.handleFieldChange} className="form-control" id="taskName"/>
-                        <placeholder htmlFor="taskName">Enter New Task</placeholder>
                     </div>
                 </div>
                 <div className="form-group row">

@@ -1,10 +1,10 @@
 const remoteURL = "http://localhost:5002"
 
 export default {
-  get(id) {
+  getTask(id) {
     return fetch(`${remoteURL}/tasks/${id}`).then(result => result.json())
   },
-  getAll() {
+  getAllTasks() {
     return fetch(`${remoteURL}/tasks`).then(result => result.json())
   },
   delete(id) {

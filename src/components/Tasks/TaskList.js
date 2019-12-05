@@ -9,7 +9,7 @@ class TaskList extends Component {
 
 
     componentDidMount() {
-        TaskManager.getAll()
+        TaskManager.getAllTasks()
             .then((tasks) => {
                 this.setState({
                     tasks: tasks
@@ -18,14 +18,23 @@ class TaskList extends Component {
 
     }
 
+    deleteTask = id => {
+        TaskManager.delete(id)
+          .then(() => {
+            TaskManager.getAllTasks()
+              .then((newTasks) => {
+                this.setState({
+                  tasks: newTasks
+                })
+              })
+          })
+      }
+
     render() {
         return (
             <>
                 <section className="section-content">
-                    <button type="button"
-                        className="btn"
-                        onClick={() => { this.props.history.push("/tasks/new") }}>Add New Task
-            </button>
+                    <button type="button" className="btn" onClick={() => { this.props.history.push("/tasks/new") }}>Add New Task</button>
                 </section>
                 <div className="container-cards">
                     {this.state.tasks.map(task =>
