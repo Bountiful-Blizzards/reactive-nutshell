@@ -5,6 +5,9 @@ import "./Nutshell.css";
 import Login from "./Auth/Login";
 
 
+localStorage.setItem("currentUser", 1)
+let i = localStorage.getItem("currentUser", 1)
+
 class Nutshell extends Component {
 
     state = {
