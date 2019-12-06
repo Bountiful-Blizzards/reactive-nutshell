@@ -9,14 +9,12 @@ class Login extends Component {
     email: "",
     password: ""
   }
-
   // Update state whenever an input field is edited
   handleFieldChange = (evt) => {
     const stateToChange = {}
     stateToChange[evt.target.id] = evt.target.value
     this.setState(stateToChange)
   }
-
   handleLogin = (e) => {
     e.preventDefault()
     this.props.setUser({
@@ -38,7 +36,6 @@ class Login extends Component {
               placeholder="Email address"
               required="" autoFocus="" />
             <label htmlFor="inputEmail">Email address</label>
-
             <input onChange={this.handleFieldChange} type="password"
               id="password"
               placeholder="Password"

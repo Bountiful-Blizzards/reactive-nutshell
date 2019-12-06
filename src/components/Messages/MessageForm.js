@@ -10,6 +10,7 @@ class MessageForm extends Component {
     state = {
         message: " ",
         loadingStatus: false,
+        timeStamp: "",
     };
 
     handleFieldChange = evt => {
@@ -27,9 +28,10 @@ class MessageForm extends Component {
             this.setState({ loadingStatus: true });
             const message = {
                 message: this.state.message,
+                timeStamp: new Date (),  // change
             };
 
-            // Create the message and redirect user to message list
+            // Create the message and redirect user to message 
             MessageManager.post(message)
                 .then(() => this.props.history.push("/messages"));
         }

@@ -30,7 +30,8 @@ export default class ApplicationViews extends Component {
   render() {
     return (
       <React.Fragment>
-        <Route
+
+       <Route
           exact path="/" render={props => {
             return <Login setUser={this.props.setUser} {...props} />
           }}
