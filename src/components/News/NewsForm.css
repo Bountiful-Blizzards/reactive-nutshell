@@ -1,0 +1,27 @@
+body {
+    background-color: darkgray;
+}
+
+.card {
+    background-color: darkgray;
+}
+
+.card-body {
+    background-color: darkorange;
+}
+
+#title {
+    background-color: darkgray;
+}
+
+#url{
+    background-color: darkgray;
+}
+
+#synopsis {
+    background-color: darkgray;
+}
+
+#saveArticle {
+    color: darkgray;
+}
