@@ -22,23 +22,23 @@ import Reg from "./Auth/Reg"
 
 
 
-
 export default class ApplicationViews extends Component {
   
- 
+  
+  isAuthenticated = () => localStorage.getItem("credentials") !== null
 
   render() {
     return (
       <React.Fragment>
         <Route
           exact path="/" render={props => {
-            return <Login setUser= {this.props.setUser} {...props}/>
+            return <Login setUser={this.props.setUser} {...props} />
           }}
         />
 
         <Route
           exact path="/register" render={props => {
-            return <Reg setUser= {this.props.setUser} {...props}/>
+            return <Reg setUser={this.props.setUser} {...props} />
           }}
         />
 
@@ -68,12 +68,14 @@ export default class ApplicationViews extends Component {
             return <MessageEditForm {...props} />
           }}
         />
-        <Route
-          exact path="/tasks" render={props => {
+
+        <Route exact path="/tasks" render={props => {
+          if (this.isAuthenticated()) {
             return <TaskList {...props} />
-            // Remove null and return the component which will show the user's tasks
-          }}
-        />
+          } else {
+            return <Redirect to="/login" />
+          }
+        }} />
 
         <Route
           path="/tasks/new" render={props => {
@@ -87,7 +89,7 @@ export default class ApplicationViews extends Component {
           }}
         />
         <Route
-           exact path="/events" render={props => {
+          exact path="/events" render={props => {
             return <EventList {...props} />
           }}
         />
@@ -97,7 +99,7 @@ export default class ApplicationViews extends Component {
 
         <Route path="/events/:eventId(\d+)/edit" render={props => {
           return <EventEditForm {...props} />
-         }} />
+        }} />
 
         <Route
           exact path="/articles" render={props => {
@@ -109,7 +111,7 @@ export default class ApplicationViews extends Component {
             return <NewsForm {...props} />
           }}
         />
-         <Route
+        <Route
           path="/articles/:articles(\d+)/edit" render={props => {
             return <NewsEditForm {...props} />
           }}
