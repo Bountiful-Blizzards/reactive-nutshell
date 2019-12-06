@@ -34,16 +34,6 @@ class EventList extends Component {
     render() {
         return (
             <>
-                <div className="container-cards">
-                    {this.state.events.map(event =>
-                        <EventCard
-                            key={event.id}
-                            event={event}
-                            deleteEvent={this.deleteEvent}
-                            {...this.props}
-                        />
-                    )}
-                </div>
                     <section className="section-content">
                         <button type="button"
                             className="btn"
@@ -51,6 +41,16 @@ class EventList extends Component {
                         </button>
                     <Link to={`/events/new`}>Add Event</Link>
                         </section>
+                <div className="container-cards">
+                    {this.state.events.map(event =>
+                        <EventCard
+                        key={event.id}
+                        event={event}
+                        deleteEvent={this.deleteEvent}
+                        {...this.props}
+                        />
+                        )}
+                </div>
             </>
         )
     }

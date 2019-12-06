@@ -91,3 +91,24 @@ localStorage.removeItem("activeUser")
    * Short paragraphs
    * Bulleted lists
 7. Strive for consistency.
+
+
+# Bountiful-Blizzards Nutshell-React Application
+Setup: Follow these steps exactly
+1. Clone this repository
+2. cd into the directory it creates
+3. In the api directory, create a copy of the database.json.example and remove the .example extension.
+4. Run npm install and wait for all dependencies to be installed
+5. Run npm start to verify that installation was successful.
+
+## Built with:
+1. React
+2. Javascript
+3. CSS
+4. Github
+5. Git Bash
+6. Functions
+7. Modulation
+8. JSON
+
+## https://nashvillesoftware.slack.com/files/UMY32K3T9/FRCUNP31N/erd_nutshell.png
