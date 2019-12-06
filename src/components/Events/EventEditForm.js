@@ -54,6 +54,7 @@ class EventEditForm extends Component {
           <form>
            <fiedset>
             <div className="formgrid">
+            <h3 htmlFor="eventName">Name</h3>
               <input
               type="text"
               required
@@ -62,8 +63,8 @@ class EventEditForm extends Component {
               id="name"
               value={this.state.name}
               />
-              <label htmlFor="eventName">Name</label>
 
+             <h3 htmlFor="date">Date</h3>
               <input
               type="text"
               required
@@ -72,8 +73,8 @@ class EventEditForm extends Component {
               id="date"
               value={this.state.date}
               />
-              <label htmlFor="date">Date</label>
 
+             <h3 htmlFor="location">Location</h3>
               <input
               type="text"
               required
@@ -82,7 +83,7 @@ class EventEditForm extends Component {
               id="location"
               value={this.state.location}
               />
-              <label htmlFor="location">Location</label>
+              
              </div>
              <div className="alignRight">
              <button

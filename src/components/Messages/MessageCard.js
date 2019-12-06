@@ -12,7 +12,7 @@ class MessageCard extends Component {
                     <h2><span className="card-message">{this.props.message.message}</span></h2>
                     <button type="button"
                         onClick={() => { this.props.history.push(`/messages/${this.props.message.id}/edit`) }}>Edit</button>
-                    <button type="button" onClick={() => this.props.deleteMessage(this.props.message.id)}>Discharge</button>
+                    <button type="button" onClick={() => this.props.deleteMessage(this.props.message.id)}>Delete</button>
                 </div>
             </div>
         )

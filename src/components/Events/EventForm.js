@@ -47,17 +47,17 @@ class EventForm extends Component {
           <div className="card-body">
           <article id="newArticleForm"><h1>Add New Event</h1>
           <section>
-              <label>Name</label>
+              <h3>Name</h3>
               <input type="text" id="name" onChange={this.handleFieldChange}/>
           </section>
       
           <section>
-              <label>Date</label>
+              <h3>Date</h3>
               <input type="text" id="date" onChange={this.handleFieldChange}/>
           </section>
       
           <section>
-          <label>Location</label>
+          <h3>Location</h3>
           <input type="text" id="location" onChange={this.handleFieldChange}/>
           </section>
           <button id="saveEvent" disabled={this.state.loadingStatus} onClick={this.constructNewEvent}>Save Event</button>
