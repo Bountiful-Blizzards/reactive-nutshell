@@ -13,6 +13,8 @@ import EventEditForm from "./Events/EventEditForm";
 import TaskEditForm from "./Tasks/TaskEditForm";
 import Login from "./Auth/Login";
 import NewsEditForm from "./News/NewsEditForm";
+import Reg from "./Auth/Reg"
+
 
 
 
@@ -37,7 +39,7 @@ export default class ApplicationViews extends Component {
 
         <Route
           exact path="/register" render={props => {
-            return null
+            return <Reg setUser= {this.props.setUser} {...props}/>
           }}
         />
 

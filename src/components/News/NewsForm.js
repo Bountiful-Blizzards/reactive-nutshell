@@ -2,13 +2,14 @@ import React, { Component } from 'react';
 import NewsManager from '../../Modules/NewsManager';
 import './NewsForm.css'
 
-class NewsForm extends Component {
+class NewsForm extends React.Component {
 
     state = {
         articles: [],
         url: "",
         title: "",
         synopsis: "",
+        timeStamp: "",
         loadingStatus: false,
     };
 
@@ -27,7 +28,8 @@ class NewsForm extends Component {
             const article = {
                 url: this.state.url,
                 title: this.state.title,
-                synopsis: this.state.synopsis
+                synopsis: this.state.synopsis,
+                timeStamp: new Date (),
                 
             };
             
