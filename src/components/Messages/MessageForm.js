@@ -31,7 +31,7 @@ class MessageForm extends Component {
                 timeStamp: new Date (),  // change
             };
 
-            // Create the message and redirect user to message list
+            // Create the message and redirect user to message 
             MessageManager.post(message)
                 .then(() => this.props.history.push("/messages"));
         }
